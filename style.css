@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    overflow:hidden;
+
+}
+
+@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #000000, #011350a2, #25437a, #0a0a0a);
+    background-size: 800% 800%;
+    animation: animatedBackground 9s ease infinite;
+    z-index: -1
+}
+
+.calc {
+    background-color: #bdbdbd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    margin-top: 20px;       
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Definindo uma altura mínima */
+    text-align: center;
+    width: 300px;
+    display: flex;
+    border: 3px solid #000000; /* Adicionando a borda */
+    z-index: 1;
+}
+
+.NamePrincipal{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #00a2ff;
+    color: #000000;
+    cursor: pointer;
+}
+
+p#resultado {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 20px;
+    color: #333;
+}
+
+@media (max-width: 720px) {
+    .calc {
+        padding: 10px 25px; /* Reduz o padding para telas pequenas */
+        margin: 15px;
+        margin-top: 20px;
+        width: 100%; /* Ajusta a largura para 100% */
+        box-shadow: none; /* Remove a sombra em dispositivos móveis */
+    }
+
+    .NamePrincipal {
+        font-size: 30px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+    label {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+    input, button {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos inputs e botões */
+        padding: 10px; /* Ajusta o padding dos inputs e botões */
+    }
+
+    p#resultado {
+        font-size: 16px; /* Ajusta o tamanho da fonte do resultado */
+    }
+}
